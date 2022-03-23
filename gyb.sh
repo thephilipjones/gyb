@@ -23,8 +23,10 @@ then
 fi
 email_address="${1?Please provide an email address.}"
 shift
-export LOCAL_FOLDER="$HOME/.gyb/${email_address}"
-export CREDENTIALS_FOLDER="$HOME/.gyb/${email_address}_credentials"
+#export LOCAL_FOLDER="$HOME/.gyb/${email_address}"
+export LOCAL_FOLDER="/nfs/email/gyb/${email_address}"
+#export CREDENTIALS_FOLDER="$HOME/.gyb/${email_address}_credentials"
+export CREDENTIALS_FOLDER="/nfs/email/gyb/${email_address}_credentials"
 export EMAIL_ADDRESS="$email_address"
 mkdir -p "$LOCAL_FOLDER" 2>/dev/null
 mkdir -p "$CREDENTIALS_FOLDER" 2>/dev/null
